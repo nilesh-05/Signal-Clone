@@ -13,13 +13,12 @@ const globalScreenOptions = {
 	headerStyle: { backgroundColor: "#2C6BED" },
 	headerTitleStyle: { color: "white" },
 	headerTintColor: "white",
-	headerTitleStyle: { alignSelf: "center" },
 };
 
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator screenOptions={globalScreenOptions}>
+			<Stack.Navigator gestureEnabled screenOptions={globalScreenOptions}>
 				<Stack.Screen name="Login" component={LoginScreen} />
 				<Stack.Screen name="Register" component={RegisterScreen} />
 			</Stack.Navigator>
