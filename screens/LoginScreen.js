@@ -22,7 +22,11 @@ const LoginScreen = ({ navigation }) => {
 		});
 		return unsubscribe;
 	}, []);
-	const signIn = () => {};
+	const signIn = () => {
+		auth
+			.signInWithEmailAndPassword(email, password)
+			.catch((err) => alert(err.messagse));
+	};
 
 	return (
 		<KeyboardAvoidingView
@@ -54,6 +58,7 @@ const LoginScreen = ({ navigation }) => {
 					secureTextEntry
 					value={password}
 					onChangeText={(pass) => setPassword(pass)}
+					onSubmitEditing={signIn}
 				/>
 			</View>
 			<Button
