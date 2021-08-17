@@ -11,7 +11,6 @@ import { Avatar } from "react-native-elements";
 import CustomListItem from "../components/CustomListItem";
 import { auth, db } from "../firebase";
 import { AntDesign, SimpleLineIcons } from "@expo/vector-icons";
-import { withDecay } from "react-native-reanimated";
 
 const HomeScreen = ({ navigation }) => {
 	const signOut = () => {
